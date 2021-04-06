@@ -26,7 +26,7 @@ body{
 /* agregar hovers */
 .calculadora {
     margin: 20rem auto;
-    max-width: 30rem;
+    max-width: 40rem;
     border: 3px solid rgba(7, 7, 7, 0.301);
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -36,9 +36,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 6rem;
     margin: .5rem;
     border: 1px solid #bbb;
-    height: 4rem;
     background-color: var(--blanco);
 
     /* Estas lineas hacen que el usuario no pueda copiar el texo del btn */
@@ -51,16 +51,19 @@ body{
     cursor: pointer;
     border: 1px solid var(--grisOscuro);
     background-color: var(--grisMedio);
-    
+}
+.btn:active{
+    font-weight: bold;
 }
 .input {
+    font-size: 3rem;
     border-radius: .5rem;
-    padding: 2rem 0;
+    padding: 3.3rem 0;
     margin: .5rem;
     text-align: right;
     border: 1px solid #bbb;
     grid-column: 1/5;
-    margin-bottom: 1rem;
+    overflow-x: auto;
 }
 .operator {
     background-color: var(--gris);
@@ -80,4 +83,11 @@ body{
     cursor: pointer;
     border: 1px solid var(--grisOscuro);
     background-color: var(--AzulOscuro);
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.equal:active{
+    font-weight: bold;
 }
