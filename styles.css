@@ -18,6 +18,7 @@ html{
     box-sizing: inherit;
 }
 body{
+    overflow:hidden;
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
 }
