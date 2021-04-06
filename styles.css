@@ -1,0 +1,83 @@
+:root{
+    --fuentePrincipal: 'Courier New', Courier, monospace;;
+    
+    --blanco: #f9f9f9;
+    --gris: #ddd;
+    --grisMedio: rgb(189, 187, 187);
+    --grisOscuro: rgb(119, 115, 115);
+    --Azul: #4891df;
+    --AzulOscuro: #4082c8;
+}
+
+/* Globales */
+html{
+    box-sizing: border-box; /*asi el padding no afecta el ancho de nuestros elementos*/
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+
+/* Cuerpo */
+/* agregar hovers */
+.calculadora {
+    margin: 20rem auto;
+    max-width: 30rem;
+    border: 3px solid rgba(7, 7, 7, 0.301);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.btn {
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    border: 1px solid #bbb;
+    height: 4rem;
+    background-color: var(--blanco);
+
+    /* Estas lineas hacen que el usuario no pueda copiar el texo del btn */
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.btn:hover {
+    cursor: pointer;
+    border: 1px solid var(--grisOscuro);
+    background-color: var(--grisMedio);
+    
+}
+.input {
+    border-radius: .5rem;
+    padding: 2rem 0;
+    margin: .5rem;
+    text-align: right;
+    border: 1px solid #bbb;
+    grid-column: 1/5;
+    margin-bottom: 1rem;
+}
+.operator {
+    background-color: var(--gris);
+}
+.equal {
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 4/5;
+    grid-row: 3/7;
+    margin: .5rem;
+    border: 1px solid #bbb;
+    background-color: var(--Azul);
+}
+.equal:hover {
+    cursor: pointer;
+    border: 1px solid var(--grisOscuro);
+    background-color: var(--AzulOscuro);
+}
