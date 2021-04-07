@@ -76,7 +76,7 @@ result.addEventListener("click", function () {
         operators.splice(divide, 1);
         divide = operators.indexOf("÷");
     }
-
+    
     var multiply = operators.indexOf("×");
     while (multiply != -1) {
         numbers.splice(multiply, 2, numbers[multiply] * numbers[multiply + 1]);
